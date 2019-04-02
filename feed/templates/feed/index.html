@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-lg-6 offset-lg-3">
+
+    <h1>RSS一覧</h1>
+
+    <section class="post-list">
+        {% if object_list|length == 0 %}
+            <p>RSS情報が存在しません。</p>
+        {% else %}
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>タイトル</th>
+                    <th>内容</th>
+                </tr>
+                <tbody>
+                {% for post in object_list %}
+                    <tr>
+                        <td width="35%">{{ post.title }}</td>
+                        <td width="65%">{{ post.text }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+
+    </section>
+
+</div>
+
+{% endblock %}
