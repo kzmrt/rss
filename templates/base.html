@@ -43,7 +43,7 @@
         <!-- ナビゲーションバーの設定 -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'search:index' %}">Search</a>
+                <a class="navbar-brand" href="{% url 'feed:index' %}">Feed</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,7 +51,7 @@
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'feed:index' %}">検索</a>
+                            <a class="nav-link" href="{% url 'feed:index' %}">RSS一覧</a>
                         </li>
 
                     </ul>
