@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from django_feedparser.settings import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'feed.apps.FeedConfig',
     "bootstrap4",
+    'django_feedparser',
 ]
 
 MIDDLEWARE = [
@@ -170,3 +172,8 @@ LOGGING = {
 
 # ログイン後のリダイレクト先URL
 LOGIN_REDIRECT_URL = '/'
+
+FEED_RENDER_ENGINES = {
+    'basic-xml': 'django_feedparser.renderer.FeedBasicRenderer',
+    'basic-json': 'django_feedparser.renderer.FeedBasicRenderer',
+}
