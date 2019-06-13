@@ -4,10 +4,12 @@
 <div class="col-lg-8 offset-lg-2">
 
     <h1>RSS一覧</h1>
-
-    {% load feedparser_tags %}
-    {% feedparser_render 'https://headlines.yahoo.co.jp/rss/all-c_sci.xml' %}
-
+    <h2>{{ feed_title }}</h2>
+    {% for entry in entries %}
+        <div>
+          <p><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></p>
+        </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
