@@ -7,7 +7,11 @@
     <h2>{{ feed_title }}</h2>
     {% for entry in entries %}
         <div>
-          <p><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></p>
+            <!-- <p><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></p> -->
+            {% for image in entry.content %}
+                {% autoescape off %} {{ image.value }} {% endautoescape %}
+                <hr>
+            {% endfor %}
         </div>
     {% endfor %}
 </div>

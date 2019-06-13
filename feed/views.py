@@ -12,7 +12,8 @@ class IndexView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        url = 'https://headlines.yahoo.co.jp/rss/all-c_sci.xml'
+        # url = 'https://headlines.yahoo.co.jp/rss/all-c_sci.xml'
+        url = 'http://karapaia.com/index.rdf'
         feed = feedparser.parse(url)
 
         context = {
