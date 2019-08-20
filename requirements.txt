@@ -1,11 +1,11 @@
-certifi==2019.3.9
+certifi==2019.6.16
 chardet==3.0.4
-Django==2.2.3
+Django==2.2.4
 django-bootstrap4==0.0.8
 django-feedparser==0.2.1
 feedparser==5.2.1
 idna==2.8
-pytz==2019.1
+pytz==2019.2
 requests==2.22.0
 six==1.12.0
 sqlparse==0.3.0
