@@ -1,6 +1,6 @@
 certifi==2019.6.16
 chardet==3.0.4
-Django==2.2.8
+Django==2.2.27
 django-bootstrap4==0.0.8
 django-feedparser==0.2.1
 feedparser==5.2.1
